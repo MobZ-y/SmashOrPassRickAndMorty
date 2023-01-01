@@ -5,10 +5,10 @@ let datastore = [];
 let pages = 1;
 
 async function FetchRickAndMorty() {
-  await fetch(`https://rickandmortyapi.com/api/character/?page=` + pages)
+  await fetch(`https://rickandmortyapi.com/api/character/` + pages)
     .then((res) => res.json())
     .then((data) => {
-      datastore = data.results;
+      datastore = data;
 
       console.log(datastore);
       Display();
@@ -16,18 +16,14 @@ async function FetchRickAndMorty() {
 }
 
 function Display() {
-  countriesContainer.innerHTML = datastore
-    .map(
-      (info) => `
+  countriesContainer.innerHTML = datastore = `
   <div class="card">
-  <img src=${info.image} alt="drapeau " >
-            <h2>${info.name}</h2>
-            <h4>${info.species}</h4>
+  <img src=${datastore.image} alt="drapeau " >
+            <h2>${datastore.name}</h2>
+            <h4>${datastore.species}</h4>
             </div>
 
-  `
-    )
-    .join("");
+  `;
 }
 
 window.addEventListener("load", FetchRickAndMorty());
