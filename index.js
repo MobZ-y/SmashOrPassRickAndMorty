@@ -1,5 +1,6 @@
 const countriesContainer = document.querySelector(".countries-container");
-const btn = document.querySelector("button");
+const btnpass = document.getElementById("pass");
+const btnsmash = document.getElementById("smash");
 
 let datastore = [];
 let pages = 1;
@@ -28,8 +29,14 @@ function Display() {
 
 window.addEventListener("load", FetchRickAndMorty());
 
-btn.addEventListener("click", () => {
-  pages = Math.floor(Math.random() * 183);
+btnpass.addEventListener("click", () => {
+  pages = Math.ceil(Math.random() * 182);
+  console.log(pages);
+  FetchRickAndMorty();
+});
+
+btnsmash.addEventListener("click", () => {
+  pages = Math.ceil(Math.random() * 182);
   console.log(pages);
   FetchRickAndMorty();
 });
