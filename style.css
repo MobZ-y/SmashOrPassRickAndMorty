@@ -28,6 +28,7 @@ img{
     border-radius: 20px;
     object-fit: cover;
     width: 260px;
+    
 }
 
 #pass{
@@ -62,4 +63,20 @@ img{
 }
 #smash:hover{
   transform: scale(1.2);
+}
+
+.i{
+  border-radius: 20px;
+  object-fit: cover;
+  width: 260px;
+  transform: translateX(80px);
+  transition: 0.5s;
+}
+
+.ineg{
+  border-radius: 20px;
+  object-fit: cover;
+  width: 260px;
+  transform: translateX(-80px);
+  transition: 0.5s;
 }

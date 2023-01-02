@@ -40,3 +40,21 @@ btnsmash.addEventListener("click", () => {
   console.log(pages);
   FetchRickAndMorty();
 });
+
+btnsmash.addEventListener("mouseover", (e) => {
+  const img = document.querySelector("img");
+
+  if (true) {
+    img.classList.toggle("i");
+  }
+});
+
+btnpass.addEventListener("mouseover", (e) => {
+  const img = document.querySelector("img");
+
+  if (true) {
+    img.classList.toggle("ineg");
+  } else {
+    img.classList.remove("i");
+  }
+});
