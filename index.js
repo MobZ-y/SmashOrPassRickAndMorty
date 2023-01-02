@@ -29,6 +29,7 @@ function Display() {
 window.addEventListener("load", FetchRickAndMorty());
 
 btn.addEventListener("click", () => {
-  pages++;
+  pages = Math.floor(Math.random() * 183);
+  console.log(pages);
   FetchRickAndMorty();
 });
